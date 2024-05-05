@@ -11,7 +11,7 @@ router.post('/getuser', async (req, res) => {
     const user = await User.findOne({ login_id });
     if (user) {
         console.log("user from DB")
-        res.json(user);
+        res.status(200).send(user);
     }
     else {
         
@@ -48,7 +48,7 @@ router.post('/getuser', async (req, res) => {
                     newUser.save();
                 })
                 .catch(error => {
-                    res.send('Error:', error);
+                    res.send('Error:', error).status(400);
                 });
 
 
