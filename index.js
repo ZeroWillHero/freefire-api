@@ -20,7 +20,7 @@ const port = process.env.PORT || 4000;
 app.use('/user',userroutes);
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/garena", {
+mongoose.connect("mongodb+srv://ict21018:HNMb5JklXRAGHqUU@cluster0.jso4fwj.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
