@@ -48,7 +48,7 @@ router.post('/getuser', async (req, res) => {
                     newUser.save();
                 })
                 .catch(error => {
-                    res.send('Error:', error).status(400);
+                    res.status(400).send('Error: ' + error);
                 });
 
 
